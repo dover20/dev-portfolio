@@ -34,7 +34,7 @@ body {
 
 .dataContainer {
     display: grid;
-    font-size: 20px;
+    font-size: 26px;
     margin: auto;
     width: 60%;
     margin-top: 20px;
@@ -43,18 +43,37 @@ body {
 }
 
 .dataContainer > div {
-    /* border: 1px solid rgb(92, 92, 92); */
     padding: 20px;
     text-align: center;
 }
 
 .dataHeader {
-    font-size: 22px;
+    font-size: 28px;
     text-align: center;
     margin-bottom: 10px;
     border-bottom: 2px solid rgb(121, 17, 17);
 }
 
 .info {
-    color: rgb(242, 255, 122);
+    color: rgb(255, 220, 122);
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 940px) {
+    .dataContainer {
+        width: 95%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .dataContainer {
+        width: 95%;
+        font-size: 22px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dataHeader {
+        font-size: 24px;
+    }
 }

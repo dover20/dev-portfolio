@@ -30,6 +30,7 @@ fetch('https://api.nasa.gov/insight_weather/?api_key=PbSTQLOONNboqZtLh7aOkvfuXp5
     document.querySelector('.minTempInfo').innerHTML = CelciusToFahren(minimumTemp).toFixed(2) + "F";
     document.querySelector('.tempInfo').innerHTML = CelciusToFahren(averageTemp).toFixed(2) + "F";
     document.querySelector('.seasonInfo').innerHTML = season;
+    document.querySelector('.sampleInfo').innerHTML = dailySamples.toLocaleString();
 });
 
 //Converts input to celcius
