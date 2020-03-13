@@ -11,14 +11,23 @@
 <body>
     <div class="container">
         <div class="header">
-            Lastest weather on <span class="headerColor">Elysium Planitia, Mars.</span>
+            Latest weather on <span class="headerColor">Elysium Planitia, Mars.</span>
         </div>
 
         <div class="dataContainer">
 
             <div class="date">
                 <div class="dataHeader">Date</div>
-                <div class="dateInfo info"></div>
+
+                <select id="selections" name="dates" onchange="nasaAPI()">
+                </select>
+
+                <!--- <div class="dateInfo info"></div> !--->
+            </div>
+
+            <div class="sol">
+                <div class="dataHeader">Martian days since landing</div>
+                <div class="solInfo info"></div>
             </div>
 
             <div class="maxTemperature">
@@ -37,8 +46,33 @@
             </div>
 
             <div class="dailySamples">
-                <div class="dataHeader">Daily Samples Collected</div>
+                <div class="dataHeader">Temp. Samples Collected Today</div>
                 <div class="sampleInfo info"></div>
+            </div>
+
+            <div class="minWindSpeed">
+                <div class="dataHeader">Min. Wind Speed</div>
+                <div class="minimumWindSpeed info"></div>
+            </div>
+
+            <div class="maxWindSpeed">
+                <div class="dataHeader">Max Wind Speed</div>
+                <div class="maximumWindSpeed info"></div>
+            </div>
+
+            <div class="averageWindSpeed">
+                <div class="dataHeader">Avg. Wind Speed</div>
+                <div class="avgWindSpeed info"></div>
+            </div>
+
+            <div class="averageWindDirection">
+                <div class="dataHeader">Avg. Wind Direction</div>
+                <div class="avgWindDirection info"></div>
+            </div>
+
+            <div class="dailyWindSamples">
+                <div class="dataHeader">Wind Samples Collected Today</div>
+                <div class="windSamplesInfo info"></div>
             </div>
 
             <div class="seasons">
@@ -48,10 +82,13 @@
 
         </div>
 
+        <footer class="footer">
+            <span class="footerText">
+                Data used from <a href="https://mars.nasa.gov/insight/weather/">NASA's InSight API</a>.
+            </span>
+        </footer>
     </div>
-    <div class="footer">
-        Data used from NASA's InSight API.
-    </div>
+
     <script src="index.js"></script>
 </body>
 </html>

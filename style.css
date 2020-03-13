@@ -1,16 +1,54 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,body {
+    position: relative;
 }
 
 body {
     background: black;
     color: white;
     font-family: 'Raleway';
+    height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(154, 193, 255);
+}
+
+a:hover {
+    color: rgb(0, 140, 255);
+}
+
+select {
+    background: rgba(29, 29, 29, 0);
+    color: rgb(255, 220, 122);
+    border-top: 2px solid rgb(121, 17, 17);
+    border-bottom: 2px solid rgb(121, 17, 17);
+    border-left: 2px solid rgb(121, 17, 17);
+    border-right: 0px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 20px;
 }
 
 .container {
-    height: 100vh;
+    min-height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 50px;
+    /* height: calc(100% - 50px); */
     background-image: url('mars.jpg');
     background-image: linear-gradient( 90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.76) ), url('mars.jpg');
     background-size: contain;
@@ -25,7 +63,7 @@ body {
     font-variant: small-caps;
     font-weight: 600;
     padding: 10px;
-    border-bottom: 1px solid rgba(255, 123, 47, 0.568);
+    border-bottom: 10px solid rgba(255, 123, 47, 0.404);
 }
 
 .headerColor {
@@ -34,12 +72,13 @@ body {
 
 .dataContainer {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 45px;
+    align-self: center;
     font-size: 26px;
     margin: auto;
-    width: 60%;
+    width: 75%;
     margin-top: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 15px;
 }
 
 .dataContainer > div {
@@ -59,17 +98,40 @@ body {
     font-weight: 900;
 }
 
+.footer {
+    position: absolute;
+    padding: 7px;
+    left: 0;
+    bottom: 5;
+    width: 100%;
+    text-align: center;
+}
+
+.footerText {
+    border-bottom: 1px solid rgba(255, 0, 0, 0.452);
+}
+
 @media only screen and (max-width: 940px) {
     .dataContainer {
         width: 95%;
+        grid-gap: 30px;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    .header{
+        font-size: 30px;
+    }
+        
+    select {
+        font-size: 14px;
+        width: 148px;
+    }
     .dataContainer {
         width: 95%;
         font-size: 22px;
+        grid-gap: 10px;
         grid-template-columns: 1fr 1fr;
     }
 
