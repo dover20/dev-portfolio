@@ -22,7 +22,6 @@
                 <select id="selections" name="dates" onchange="nasaAPI()">
                 </select>
 
-                <!--- <div class="dateInfo info"></div> !--->
             </div>
 
             <div class="sol">
@@ -46,7 +45,7 @@
             </div>
 
             <div class="dailySamples">
-                <div class="dataHeader">Temp. Samples Collected Today</div>
+                <div class="dataHeader">Daily Temp. Samples Collected</div>
                 <div class="sampleInfo info"></div>
             </div>
 
@@ -71,7 +70,7 @@
             </div>
 
             <div class="dailyWindSamples">
-                <div class="dataHeader">Wind Samples Collected Today</div>
+                <div class="dataHeader">Daily Wind Samples Collected</div>
                 <div class="windSamplesInfo info"></div>
             </div>
 
@@ -84,6 +83,7 @@
 
         <footer class="footer">
             <span class="footerText">
+                <div id="nextUpdate"></div>
                 Data used from <a href="https://mars.nasa.gov/insight/weather/">NASA's InSight API</a>.
             </span>
         </footer>
