@@ -126,6 +126,7 @@ select {
         
     select {
         font-size: 14px;
+        border-right: 2px solid rgb(121, 17, 17);
         width: 148px;
     }
     .dataContainer {
